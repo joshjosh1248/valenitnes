@@ -1,0 +1,51 @@
+<div class="container">
+    <button class="audio-btn" (click)="toggleAudio()">
+        {{ audio.paused ? 'Play Music' : 'Mute Music' }}
+      </button>
+      
+    <div class="content-wrapper">
+  
+      <!-- Slideshow on the left -->
+      <div class="slideshow-wrapper">
+        <img
+          [src]="images[currentIndex]"
+          class="slide-image fade-in"
+          alt="Memory photo"
+        />
+      </div>
+  
+      <!-- Text on the right -->
+      <div class="text-wrapper">
+        <h1>Every Day with you is my favorite, Ponnnuuuuuuuuuuu ✨</h1>
+      </div>
+  
+    </div>
+  
+    <!-- Sparkles over everything -->
+    <div class="sparkle-container">
+      <div
+        class="sparkle"
+        *ngFor="let s of sparkles"
+        [style.left.%]="s.left"
+        [style.animationDelay.s]="s.delay"
+        [style.width.px]="s.size"
+        [style.height.px]="s.size"
+      ></div>
+    </div>
+  <!-- Floating special days -->
+  <div class="floating-text-container">
+    <div
+      *ngFor="let t of floatingTexts"
+      class="floating-text"
+      [style.left.px]="t.leftPx"
+      [style.fontSize.px]="t.size"
+      [style.animationDelay.s]="t.delay"
+      [style.animationDuration.s]="t.duration"
+    >
+      {{ t.text }}
+    </div>
+  </div>
+  
+  
+  </div>
+  

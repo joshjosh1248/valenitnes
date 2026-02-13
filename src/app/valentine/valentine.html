@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Hi ❤️</h1>
+    <p>Njn oru kaaryam choikatte...</p>
+  
+    <h2>Will you be my Valentine💖</h2>
+  
+    <div class="button-area" #buttonArea>
+        <button class="yes-btn" (click)="sayYes()">Yes 💕</button>
+      
+        <button
+          class="no-btn"
+          [style.top.px]="noButtonTop"
+          [style.left.px]="noButtonLeft"
+          (mouseenter)="moveNoButton()"
+        >
+          No 😜
+        </button>
+      </div>
+      
+  
+    <div *ngIf="accepted" class="love-message">
+      YAYYYYY 💖 You just made my day 😍✨
+    </div>
+  </div>
+  

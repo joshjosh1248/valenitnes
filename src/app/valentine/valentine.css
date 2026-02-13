@@ -1,0 +1,54 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  
+  .button-area {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    margin-top: 20px;
+  }
+  
+  
+  button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+  
+  .yes-btn {
+    background: white;
+    color: #ff4e8d;
+    left: 50px;
+    top: 80px;
+  }
+  
+  .no-btn {
+    background: #ff4e8d;
+    color: white;
+  }
+  
+  .love-message {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: white;
+    animation: pop 0.5s ease-in-out;
+  }
+  
+  @keyframes pop {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  

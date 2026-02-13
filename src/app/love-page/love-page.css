@@ -1,0 +1,141 @@
+/* Container */
+.container {
+    height: 100vh;
+    background: radial-gradient(circle at center, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Wrapper to place slideshow and text side by side */
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* space between slideshow and text */
+  }
+  
+  /* Slideshow */
+  .slideshow-wrapper {
+    position: relative;
+    width: 350px; /* adjust width */
+    height: 500px; /* adjust height */
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1);
+    animation: fadeZoom 4s ease-in-out forwards;
+  }
+  
+  /* Fade + zoom animation */
+  @keyframes fadeZoom {
+    0% { opacity: 0; transform: scale(1); }
+    20% { opacity: 1; transform: scale(1.02); }
+    80% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1.08); }
+  }
+  
+  /* Text on the right */
+  .text-wrapper {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* left-align text */
+  }
+  
+  .text-wrapper h1 {
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .text-wrapper p {
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+  .audio-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Sparkles */
+  .sparkle-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .sparkle {
+    position: absolute;
+    bottom: -20px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow: 0 0 8px white, 0 0 20px white;
+    animation: floatSparkle 8s linear infinite;
+  }
+  
+  @keyframes floatSparkle {
+    0% { transform: translateY(0) scale(0.5); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+  }
+  .floating-text-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .floating-text {
+    position: absolute;
+    bottom: -50px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 4px black;
+    white-space: nowrap;
+    animation-name: floatText;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes floatText {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+  }
+  
+  
+  
+  @keyframes floatText {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+  }
+  
